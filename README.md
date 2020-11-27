@@ -1,3 +1,15 @@
+이 Repository는 <https://github.com/shaynekang/omniauth-kakao>로 부터 fork를 떠서 수정한 것입니다. `OmniAuth Kakao`가 현재 관리되지 않아서 실행시 오류가 납니다. 그래서 해당 오류 수정 및 좀 더 많은 kakao account 정보를 가져올 수 있도록 수정하였습니다. 수정한 내용은 원래 Repository에 Pull Request를 넣어둔 상태입니다. 그것이 반영되기 전까지는 이것을 사용하시면 됩니다.
+
+`Gemfile`에 다음의 코드를 넣어주세요.
+
+```ruby
+gem 'omniauth-kakao', git: "https://github.com/DevStarSJ/omniauth-kakao"
+```
+
+나머지는 아래와 동일합니다.
+
+---
+
 # OmniAuth Kakao
 
 This is the OmniAuth strategy for authenticating to [Kakao](http://www.kakao.com/). To
