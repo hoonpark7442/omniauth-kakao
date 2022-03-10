@@ -17,8 +17,8 @@ module OmniAuth
 
       info do
         {
-          'name' => raw_properties['nickname'],
-          'image' => raw_properties['thumbnail_image'],
+          'name' => raw_properties.nil? ? "" : raw_properties['nickname'],
+          'image' => raw_properties.nil? ? "" : raw_properties['thumbnail_image'],
         }.merge(kakao_account)
       end
 
@@ -64,9 +64,6 @@ module OmniAuth
       end
 
       def raw_properties
-        puts "======================="
-        p raw_info
-        puts "======================="
         @raw_properties ||= raw_info['properties']
       end
 
