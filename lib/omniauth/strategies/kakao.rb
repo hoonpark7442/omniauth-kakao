@@ -16,6 +16,9 @@ module OmniAuth
       uid { raw_info['id'].to_s }
 
       info do
+        puts "========================"
+        p raw_properties
+        puts "========================"
         {
           'name' => raw_properties['nickname'],
           'image' => raw_properties['thumbnail_image'],
